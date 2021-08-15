@@ -1,0 +1,192 @@
+body {
+  background: rgb(255, 231, 200);
+  background: radial-gradient(
+    circle,
+    rgba(255, 231, 200, 1) 0%,
+    rgba(255, 161, 76, 1) 50%,
+    #cd6600 100%
+  );
+
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  text-align: center;
+}
+
+/* The image of Mines Sweeper Title */
+
+.game-title img {
+  box-shadow: 50px 50px 100px rgb(0, 0, 0);
+
+  background: rgba(255, 207, 144, 0.5);
+  background: radial-gradient(
+    circle,
+    rgba(255, 207, 144, 1) 0%,
+    rgba(205, 102, 0, 1) 50%,
+    rgba(172, 110, 54, 1) 100%
+  );
+  padding: 5px;
+  grid-area: header;
+  margin-top: 85px;
+  margin-bottom: 0;
+  height: 120px;
+  position: sticky;
+  width: 60rem;
+}
+
+.screen {
+  display: grid;
+
+  justify-content: center;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 0.5fr, 1fr;
+  grid-column-gap: 1px;
+}
+
+/* Text of score and flags */
+.state span {
+  font-size: 5rem;
+  color: rgb(0, 0, 0);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Block of score,flags... */
+.state {
+  grid-column: 1, 1;
+  display: inline-block;
+}
+
+/* Position mines picture */
+.pos-mines {
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 450px;
+}
+
+.safe-click {
+  width: 375px;
+}
+
+.pos-mines,
+.safe-click,
+.hints {
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+/* Table container */
+.board-container table {
+  display: inline-block;
+  grid-column: 2, 3 span 2;
+  display: inline-block;
+
+  border: 5px solid black;
+  border-radius: 2%;
+
+  background-color: rgb(0, 0, 0);
+
+  transition: 0.5s;
+  box-shadow: 20px 20px 50px 15px rgb(0, 0, 0);
+}
+
+/* Table tbody */
+table tbody {
+  background-color: rgb(255, 198, 77);
+  transition: 0.5s;
+}
+
+/* Each individual cell */
+.cell {
+  min-width: 55px;
+  min-height: 55px;
+  width: 55px;
+  height: 55px;
+
+  border: 1px solid rgba(0, 0, 0, 0.363);
+  border-radius: 10%;
+
+  font-size: 2rem;
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* When hovering above a cell */
+td.cell:hover {
+  background-color: rgb(94, 94, 94);
+
+  transition: 0.2s;
+}
+
+/* The picture inside a cell (mine / flag) */
+.cell img {
+  width: 37px;
+  height: 27px;
+}
+
+/* Each div inside levels */
+.levels {
+  display: inline-block;
+  grid-column: 2, 3;
+}
+
+/* Levels images */
+.easy-level,
+.medium-level,
+.hard-level {
+  padding: 60px;
+  height: 80px;
+  cursor: pointer;
+}
+
+/* Win / Lose message */
+.msg img {
+  display: inline-block;
+  height: 80px;
+  margin: 20px;
+}
+
+/* Container of game functions above the board */
+.game-func {
+  display: inline-block;
+}
+
+/* Emoji */
+.emoji-msg {
+  display: inline-block;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+/* Lives container */
+.lives {
+  display: inline;
+  margin-left: 20px;
+}
+
+/* Lives hearts */
+.lives img {
+  height: 40px;
+  padding: 2px;
+}
+
+/* Timer */
+.timer {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 3rem;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.undo {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.undo img {
+  width: 150px;
+}

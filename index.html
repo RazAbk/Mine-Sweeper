@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="initGame()">
+
+    <!-- Game Title -->
+    <div class="game-title">
+        <img src="IMG/GameTitle.png">
+    </div>
+
+    <!-- Victory / Lose message & Timer -->
+    <div class="msg"><img src="IMG/Won.png"></div>
+    <h3 class="timer"></h3>
+
+    <!-- Game functions - above the board -->
+    <div class="game-func">
+
+        <div onclick="undo()" class="undo"><img src="IMG/undo.png"></div>
+        <div onclick="initGame()" class="emoji-msg">😀</div>
+        <div class="lives">
+            <!-- Lives go -->
+        </div>
+
+    </div>
+
+    <!-- Container of Board, Game data and levels -->
+    <div class="screen">
+        <!-- Game Data -->
+        <div class="state">
+            <img src="IMG/score.png"><br><span class="score">0</span><br>
+            <img src="IMG/flags.png"><br><span class="flags">0</span><br>
+            <img class="hints" onclick="useHint()" src=""><br><br><br>
+            <img class="safe-click" onclick="safeClick()" src=""><br>
+            <img class="pos-mines" onclick="manuallyPositionMines()" src="/IMG/positionmines.png"><br>
+        </div>
+
+
+        <!-- Board - in The middle -->
+        <div class="board-container">
+            <!-- Board insert here -->
+            
+        </div>
+        
+
+         <!-- Game Levels -->
+         <div class="levels">
+                <img onclick="changeGameLevel(this)" class="easy-level" src="IMG/Easy_Chosen.png">
+         <br>
+                <img onclick="changeGameLevel(this)" class="medium-level" src="IMG/Medium.png">
+         <br>
+                <img onclick="changeGameLevel(this)" class="hard-level" src="IMG/Hard.png">
+         </div>
+    
+
+    </div>
+
+
+    <script src="js/game.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+<!-- asd -->
+</html>
